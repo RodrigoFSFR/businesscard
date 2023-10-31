@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { Transition } from "react-transition-group";
-import "./FadeIn.css";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./FadeIn.css";
 
 const FadeIn = () => {
   const [isVisible, setIsVisible] = useState(false);
