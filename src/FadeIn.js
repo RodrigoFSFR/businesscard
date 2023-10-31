@@ -61,7 +61,7 @@ const FadeIn = () => {
           }}
           className="container"
         >
-          <p>
+          <p className="text">
             {field1}{" "}
             <ContentCopyIcon
               className="copy"
@@ -86,12 +86,12 @@ const FadeIn = () => {
               onClick={() => copyToClipboard(field4, field4Name)}
             />
           </p>
-          <button>
-            Visit Website{" "}
-            <a href="./#" target="_blank" rel="noopener noreferrer">
-              <OpenInNewIcon className="redirect" />
-            </a>
-          </button>
+
+          <a href="./#" target="_blank" rel="noopener noreferrer">
+            <button className="visit-button">
+              Visit Website <OpenInNewIcon className="redirect" />
+            </button>
+          </a>
         </div>
       )}
     </Transition>
