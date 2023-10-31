@@ -1,11 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import FadeIn from "./FadeIn";
+import LogoAnimation from "./LogoAnimation";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <LogoAnimation />
+        <FadeIn />
       </header>
     </div>
   );

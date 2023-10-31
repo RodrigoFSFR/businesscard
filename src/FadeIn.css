@@ -1,0 +1,51 @@
+.container {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 70%;
+  }
+}
+
+p {
+  text-align: center;
+  line-height: 135%;
+}
+
+p .copy:hover {
+  fill: rgb(188, 183, 183);
+  cursor: pointer;
+}
+
+button {
+  height: calc(35px + 2vmin);
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  font-size: calc(12px + 2vmin);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: gainsboro;
+}
+
+button .redirect {
+  fill: black;
+}
+
+.custom-toast {
+  background: #61dafb;
+}
+
+.custom-toast-progress {
+  color: #61dafb;
+}
