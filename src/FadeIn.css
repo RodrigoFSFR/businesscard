@@ -1,4 +1,5 @@
 .container {
+  z-index: 1;
   margin-top: 4%;
   display: flex;
   flex-direction: column;
@@ -7,18 +8,9 @@
   height: auto;
 }
 
-@media only screen and (max-width: 768px) {
-  .container {
-    margin-top: 18%;
-  }
-
-  .text {
-    line-height: 180%;
-  }
-}
-
-p {
-  text-align: center;
+.text {
+  margin-left: 80px;
+  text-align: left;
   line-height: 135%;
 }
 
@@ -27,7 +19,7 @@ p .copy:hover {
   cursor: pointer;
 }
 
-.visit-button {
+button {
   height: calc(35px + 2vmin);
   margin-top: 5px;
   border-radius: 5px;
@@ -35,7 +27,7 @@ p .copy:hover {
   background-color: white;
   font-size: calc(12px + 2vmin);
   text-align: center;
-  width: fit-content;
+  width: 18vw;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -45,6 +37,21 @@ button:hover {
   background-color: gainsboro;
 }
 
-button .redirect {
+button .icon-b {
   fill: black;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    margin-top: 18%;
+  }
+
+  .text {
+    line-height: 180%;
+    margin-left: 15px;
+  }
+
+  button {
+    width: 60vw;
+  }
 }

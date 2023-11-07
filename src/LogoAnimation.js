@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Transition } from "react-transition-group";
-import logo from "./logo.svg";
+import logo from "./logo.png";
 
 const LogoAnimation = () => {
   const [isImageVisible, setIsImageVisible] = useState(false);
@@ -26,12 +26,14 @@ const LogoAnimation = () => {
 
   const transitionStyles = {
     entering: {
-      transform: "translate(-50%, -50%) scale(1.42)",
+      transform: isMobile
+        ? "translate(-50%, -50%) scale(0.9)"
+        : "translate(-50%, -50%) scale(1.42)",
     },
     entered: {
       transform: isMobile
-        ? "translate(-50%, -100%) scale(1)"
-        : "translate(-50%, -100%) scale(0.5)",
+        ? "translate(-50%, -100%) scale(0.7)"
+        : "translate(-50%, -100%) scale(0.7)",
     },
     exiting: {
       transform: isMobile
@@ -50,9 +52,10 @@ const LogoAnimation = () => {
       {(state) => (
         <img
           style={{
+            zIndex: "0",
             position: "absolute",
             left: "50%",
-            top: isMobile ? "40%" : "50%",
+            top: "40%",
             transition: "transform 1s",
             ...transitionStyles[state],
           }}
