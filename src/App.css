@@ -1,14 +1,19 @@
 .App {
   text-align: center;
-}
-
-.App-header {
   background: linear-gradient(
     to top right,
     rgb(229, 131, 244),
     rgb(106, 193, 228),
     rgb(106, 193, 228)
   );
+  z-index: 0;
+}
+
+.App-header {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 110%;
+  z-index: 1;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,4 +21,10 @@
   justify-content: center;
   font-size: calc(18px + 2vmin);
   color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .App-header {
+    background-size: cover;
+  }
 }

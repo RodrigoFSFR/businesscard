@@ -52,7 +52,8 @@ const LogoAnimation = () => {
       {(state) => (
         <img
           style={{
-            zIndex: "0",
+            filter: "drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.6))",
+            zIndex: "2",
             position: "absolute",
             left: "50%",
             top: "40%",
