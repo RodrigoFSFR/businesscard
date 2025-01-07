@@ -10,7 +10,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./FadeIn.css";
-import fileSaver from 'file-saver';
+import fileSaver from "file-saver";
 import vcard from "./vcard_SipSync.vcf";
 
 const FadeIn = () => {
@@ -31,13 +31,14 @@ const FadeIn = () => {
 
   const field4 = [
     "Frenchay Campus,",
-    <br />,
+    <br key="1" />,
     "Coldharbour Lane,",
-    <br />,
+    <br key="2" />,
     "Bristol, BS16QY,",
-    <br />,
+    <br key="3" />,
     "United Kingdom",
   ];
+
   // field4Text is separate from field 4 so the <br/>'s do not get copied as [object, Object]
   const field4Text =
     "Frenchay Campus, Coldharbour Lane, Bristol, BS16QY, United Kingdom";
@@ -113,7 +114,7 @@ const FadeIn = () => {
             />
           </p>
 
-          <Fragment className="button-container">
+          <Fragment>
             <button onClick={saveVcard}>
               Add to Contacts <ContactPageIcon className="icon-b" />
             </button>
